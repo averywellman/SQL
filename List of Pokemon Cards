@@ -1,0 +1,32 @@
+--create a list of Pokemon cards, their type and their price.  
+
+CREATE TABLE pokemon_cards (id INTEGER PRIMARY KEY, name TEXT, type TEXT, price INTEGER);
+
+INSERT INTO pokemon_cards VALUES (1, "Bulbasaur", "Grass", "$80");
+INSERT INTO pokemon_cards VALUES (2, "Ivysaur", "Grass", "$20");
+INSERT INTO pokemon_cards VALUES (3, "Venusaur", "Grass", "$50");
+INSERT INTO pokemon_cards VALUES (4, "Charmander", "Fire", "$75");
+INSERT INTO pokemon_cards VALUES (5, "Charmeleon", "Fire", "$27");
+INSERT INTO pokemon_cards VALUES (6, "Charizard", "Fire", "$80");
+INSERT INTO pokemon_cards VALUES (7, "Squirtle", "Water", "$62");
+INSERT INTO pokemon_cards VALUES (8, "Wartortle", "Water", "$25");
+INSERT INTO pokemon_cards VALUES (9, "Blastoise", "Water", "$90");
+INSERT INTO pokemon_cards VALUES (10, "Caterpie", "Bug", "$15");
+INSERT INTO pokemon_cards VALUES (11, "Metapod", "Bug", "$24");
+INSERT INTO pokemon_cards VALUES (12, "Butterfree", "Bug", "$22");
+INSERT INTO pokemon_cards VALUES (13, "Weedle", "Bug", "$20");
+INSERT INTO pokemon_cards VALUES (14, "Kakuna", "Bug", "$18");
+INSERT INTO pokemon_cards VALUES (15, "Beedrill", "Bug", "$24");
+
+--display order by price
+SELECT * FROM pokemon_cards 
+ORDER BY price desc;
+
+--average price of cards 
+SELECT AVG(PRICE) FROM pokemon_cards;
+
+--how many types of each pokemon card are in stock   
+SELECT type, COUNT(*) FROM pokemon_cards 
+GROUP BY type;
+
+
