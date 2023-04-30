@@ -1,0 +1,41 @@
+CREATE TABLE singers (id INTEGER PRIMARY KEY, name TEXT, title TEXT);
+
+INSERT INTO singers VALUES (1, "Miley Cyrus", "The Climb");
+INSERT INTO singers VALUES (2, "SZA", "Nobody Gets Me");
+INSERT INTO singers VALUES (3, "Morgan Wallen", "Last Night");
+INSERT INTO singers VALUES (4, "Eminiem", "Without Me");
+INSERT INTO singers VALUES (5, "Melanie Martinez", "Powder");
+INSERT INTO singers VALUES (6, "Taylor Swift", "Cardigan");
+INSERT INTO singers VALUES (7, "Ariana Grande", "Just Like Magic");
+INSERT INTO singers VALUES (8, "Joyner Lucas", "Finally");
+INSERT INTO singers VALUES (9, "Chris Webby", "GO!");
+INSERT INTO singers VALUES (10, "Lizzy McAlpine", "Ceilings");
+INSERT INTO singers VALUES (11, "Rema", "Calm Down");
+INSERT INTO singers VALUES (12, "Tech N9ne", "The Rain");
+INSERT INTO singers VALUES (13, "Johnny Cash", "Ring of Fire");
+INSERT INTO singers VALUES (14, "Troye Sivan", "Dance to This");
+INSERT INTO singers VALUES (15, "Selena Gomez", "Lose You to Love Me");
+
+
+CREATE TABLE place_of_birth (id INTEGER PRIMARY KEY, city TEXT, state TEXT);
+INSERT INTO place_of_birth VALUES (1, "Fraklin", "TN");
+INSERT INTO place_of_birth VALUES (2, "St.Louis", "MO");
+INSERT INTO place_of_birth VALUES (3, "Sneedville", "TN");
+INSERT INTO place_of_birth VALUES (4, "St. Joseph", "MO");
+INSERT INTO place_of_birth VALUES (5, "Astoria", "NY");
+INSERT INTO place_of_birth VALUES (6, "West Reading", "PA");
+INSERT INTO place_of_birth VALUES (7, "Boca Raton", "FL");
+INSERT INTO place_of_birth VALUES (8, "Worcester", "MA");
+INSERT INTO place_of_birth VALUES (9, "Norwalk", "CT");
+INSERT INTO place_of_birth VALUES (10, "Philadelphia", "PA");
+INSERT INTO place_of_birth VALUES (11, "Benin City", "NRA");
+INSERT INTO place_of_birth VALUES (12, "Kansas City", "MO");
+INSERT INTO place_of_birth VALUES (13, "Kingsland", "AR");
+INSERT INTO place_of_birth VALUES (14, "Johannesburg", "SA");
+INSERT INTO place_of_birth VALUES (15, "Grand Prairie", "TX");
+
+
+SELECT singers.name, place_of_birth.city, place_of_birth.state
+FROM singers
+JOIN place_of_birth
+ON singers.id=place_of_birth.id;
