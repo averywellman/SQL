@@ -43,3 +43,17 @@ WHERE Feb.Quantity>2
 AND length(orderid) = 6
 AND orderid <> 'Order ID';
 
+SELECT distinct Product
+FROM BIT_DB.FebSales
+WHERE Product like '%Batteries%';
+
+
+SELECT distinct Product, Price
+FROM BIT_DB.FebSales 
+WHERE Price like '%.99';
+
+
+SELECT product, SUM(quantity)
+FROM BIT_DB.FebSales
+WHERE location like '%Los Angeles%'
+GROUP BY product; 
