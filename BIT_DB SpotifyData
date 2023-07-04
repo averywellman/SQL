@@ -46,7 +46,7 @@ LIMIT 10;
 #Next I determined what artist released the longest song
 SELECT artist_name, track_name, duration_ms
 FROM BIT_DB.Spotifydata
-ORDER BY duration_ms asc
+ORDER BY duration_ms desc
 LIMIT 1;
 
 
