@@ -1,0 +1,21 @@
+SELECT company_name,
+CASE WHEN avg_employee_tenure >= 7 THEN "Wonderful Company to Work For"
+WHEN avg_employee_tenure >= 5 THEN "Good Company to Work For"
+WHEN avg_employee_tenure >= 3 THEN "Okay Company to Work For"
+ELSE "Not Good Company to Work For" END AS employee_tenure
+FROM fortune_companies
+GROUP BY avg_employee_tenure;
+
+SELECT company_name, paid_time_off_days FROM fortune_companies
+GROUP BY company_name
+HAVING paid_time_off_days >= 15
+ORDER BY paid_time_off_days desc;
+
+SELECT company_name, MAX(revenue) 
+FROM fortune_companies
+WHERE industry = "Technology";
+
+
+SELECT industry, ROUND(AVG(revenue),2) AS Revenue
+FROM fortune_companies
+GROUP BY industry;
